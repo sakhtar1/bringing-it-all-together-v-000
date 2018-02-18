@@ -51,7 +51,7 @@ class Dog
     id = row[0]
     name = row[1]
     breed = row[2]
-    self.new(id, name,breed)
+    self.new(id: id, name: name ,breed: breed)
   end
 
   def self.find_by_name(name)
@@ -67,7 +67,7 @@ class Dog
     end.first
   end
 
-  def self.find_by_id(id)
+  def self.find_by_id(id, name, breed)
    sql = "SELECT * FROM dogs WHERE id = ?"
    @id = DB[:conn].execute(sql, id)[0]
   
