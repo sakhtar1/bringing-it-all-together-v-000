@@ -82,7 +82,7 @@ class Dog
      dog = self.create(name: name, breed: breed)
    end
    dog
- end 
+ end
 
   def update
     sql = "UPDATE dogs SET name = ?, breed = ? WHERE id = ?"
