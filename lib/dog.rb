@@ -1,8 +1,8 @@
 class Dog
   attr_accessor :name, :breed, :id
 
-  def initialize(id:, name:, breed:)
-    @id = nil
+  def initialize(id: nil, name:, breed:)
+    @id = id
     @name = name
     @breed = breed
   end
@@ -89,6 +89,7 @@ class Dog
    else
      dog = self.create(name: name, breed: breed)
    end
+
  end
 
   def update
